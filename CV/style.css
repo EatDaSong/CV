@@ -1,0 +1,259 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 mai 2018, 12:06:55
+    Author     : utilisateur
+*/
+
+@keyframes zoomin {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes lefttoright {
+  from {
+    margin-left: -2550px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+@keyframes righttoleft {
+  from {
+    margin-left: 2550px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: darkgrey;
+}
+
+a{
+    text-decoration: none;
+}
+
+.head > h1 {
+    color: gray;
+    text-align: center;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+    background-color: #F2F2F2;
+    margin: 4px 0 10px 0;
+    border-radius: 10px 10px;
+}
+
+.body {
+    margin-right: 250px;
+    padding-right: 1em;
+}
+
+.inbody1 > div {
+    display: table-cell;
+    width: 100%; /* 100%/3 = 3 colonnes */
+    padding: 20px;
+    border: 5px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+}
+
+.inbody2 > div {
+    display: table-cell;
+    width: 45%;/* 50%; 100%/3 = 3 colonnes */
+    padding: 20px;
+    border: 5px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+}
+
+.inbodyleft {
+    float: left;
+}
+
+.inbodyright {
+    float: right;
+}
+
+.sidebar {
+    text-align: center;
+    min-height:200px;
+    float: right;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+    margin-right: 8px;
+    position: absolute;
+    right: 0px;
+    border: 1px black solid;
+    border-radius: 10px 10px;
+    min-width: 240px;
+    padding-bottom: 1em;
+}
+
+.insidebar {
+    border: 1px gray dotted;
+    margin: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+
+.insidebar > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: gray;
+}
+
+/* overlay */
+
+
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5, #overlay6 {
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#overlay1:target, #overlay2:target, #overlay3:target, #overlay4:target, #overlay5:target, #overlay6:target {
+    display: block;
+}
+
+.popup_block {
+    background: #fff;
+    padding: 20px;
+    border: 20px solid #ddd;
+    position: relative;
+    margin: 10% auto;
+    width: 40%;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 10px;
+}
+
+img.btn_close {
+    float: right;
+    margin: -55px -55px 0 0;
+}
+
+.img_learn {
+    float: right;
+    margin: 0 0 0 40px;
+    vertical-align: middle;
+}
+
+#photo {
+    float: right;
+    margin: 20px 40px 0 40px;
+    animation-duration: 3s;
+    animation-name: zoomin; 
+    animation-fill-mode: forwards; 
+}
+
+#comp1 {
+    margin-left: -2555px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;
+}
+
+#comp2 {
+    margin-left: -2555px;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;    
+}
+
+#comp3 {
+    margin-left: -2555px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;    
+}
+
+#job1 {
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;    
+}
+
+#job2 {
+    margin-left: -2555px;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;        
+}
+
+#job3 {
+    margin-left: -2555px;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: lefttoright;       
+}
+
+#slideshow {
+	position: relative;    /*le parent positionné*/
+	width: 300px;          /*limite en largeur (1 élément du slideshow)*/
+	height: 150px;         /*limite en hauteur*/
+	margin: 30px;
+	overflow: hidden;      /*on cache ce qui déborde*/
+}
+#sContent {
+	position: absolute;   /*on sort l'élément du flux*/
+	top: 0;               /*on le positionne précisément dans ...*/
+	left: 0;              /*l'angle haut gauche de son parent positionné*/
+	width: 300%;         /*ou 300% car 3 éléments*/
+	margin: 0;            
+	padding: 0;
+	z-index: 10;
+	
+	/*CSS3 transition*/
+        -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+#sContent li {
+	display: inline;      /*on aligne les éléments du slideshow*/
+}
+
+#slideshow .next, #slideshow .prev {
+	position: absolute;
+	top: 65px;
+	z-index: 20;
+}
+#slideshow .prev { left: 0; }
+#slideshow .next { right: 0; }
+
+/* initialisation */
+#slideshow .next, #slideshow .prev { display: none; }
+#slideshow .next1 { display: block; }
+
+/* Vers 1ère étape */
+#s1:target #sContent { left: 0px; }
+#s1:target .next, #s1:target .prev { display: none; }
+#s1:target .next1 { display: block; }
+
+/* Vers 2ème étape */
+#s2:target #sContent { left: -100%; } /*ou -100%*/
+#s2:target .next, #s2:target .prev { display: none; }
+#s2:target .next2, #s2:target .prev2 { display: block; }
+
+/* Vers 3ème étape */
+#s3:target #sContent { left: -200%; } /*ou -200%*/
+#s3:target .next, #s3:target .prev { display: none; }
+#s3:target .prev3 { display: block; }
