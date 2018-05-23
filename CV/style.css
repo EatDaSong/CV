@@ -8,6 +8,8 @@ and open the template in the editor.
     Author     : utilisateur
 */
 
+
+
 @keyframes zoomin {
   from {
     width: 0px;
@@ -65,28 +67,34 @@ a{
 
 .inbody1 > div {
     display: table-cell;
-    width: 100%; /* 100%/3 = 3 colonnes */
+    width: 98%; /* 100%/3 = 3 colonnes */
     padding: 20px;
     border: 5px #F2F2F2 solid;
     background: #FFF;
     border-radius: 20px;
 }
 
-.inbody2 > div {
-    display: table-cell;
-    width: 45%;/* 50%; 100%/3 = 3 colonnes */
-    padding: 20px;
-    border: 5px #F2F2F2 solid;
-    background: #FFF;
-    border-radius: 20px;
+.inbody2 {
+    position: relative;
 }
+
 
 .inbodyleft {
-    float: left;
+    display: inline-block;
+    /*padding: 20px;*/
+    border: 2px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+    width: 49%;
 }
 
 .inbodyright {
-    float: right;
+    display: inline-block;
+    /*padding: 20px;*/
+    border: 2px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+    width: 49%;
 }
 
 .sidebar {
@@ -118,7 +126,7 @@ a{
 /* overlay */
 
 
-#overlay1, #overlay2, #overlay3, #overlay4, #overlay5, #overlay6 {
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5, #overlay6, #overlay7, #overlay8, #overlay9 {
     display: none;
     position: fixed;
     top:0; right:0; bottom:0; left:0;
@@ -148,7 +156,6 @@ img.btn_close {
 
 .img_learn {
     float: right;
-    margin: 0 0 0 40px;
     vertical-align: middle;
 }
 
@@ -257,3 +264,86 @@ img.btn_close {
 #s3:target #sContent { left: -200%; } /*ou -200%*/
 #s3:target .next, #s3:target .prev { display: none; }
 #s3:target .prev3 { display: block; }
+
+.video {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.videovisible {
+    display: relative;
+}
+
+@media screen and (max-width: 800px)
+
+{
+
+.videovisible {
+    display: none;
+}
+
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5, #overlay6, #overlay7, #overlay8, #overlay9 {
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#overlay1:target, #overlay2:target, #overlay3:target, #overlay4:target, #overlay5:target, #overlay6:target, #overlay7:target, #overlay8:target, #overlay9:target {
+    display: block;
+}
+
+.sidebar {
+    text-align: center;
+    min-height:200px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+    border: 1px black solid;
+    border-radius: 10px 10px;
+    min-width: 240px;
+    padding-bottom: 1em;
+	position: relative;
+	float: none;
+	margin-bottom: 10px;
+}
+
+.body {
+    margin-right: 0;
+    padding-right: 1em;
+}
+
+.inbody1 > div {
+    display: table-cell;
+    width: 100%; /* 100%/3 = 3 colonnes */
+    padding: 20px;
+    border: 5px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+}
+
+.inbody1 {
+	margin-bottom: 10px;
+}
+
+.inbodyleft {
+    display: inline-block;
+    /*padding: 20px;*/
+    border: 2px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+    width: 100%;
+	margin-bottom: 10px;
+}
+
+.inbodyright {
+    display: inline-block;
+    /*padding: 20px;*/
+    border: 2px #F2F2F2 solid;
+    background: #FFF;
+    border-radius: 20px;
+    width: 100%;
+	margin-bottom: 10px;
+}
+
+}

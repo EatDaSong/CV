@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet"/>
+        <link rel="stylesheet" media="screen and (max-width: 1200px)" href="petite_resolution.css" />
     </head>
     <body>
         <div class="head">
@@ -64,7 +65,7 @@ and open the template in the editor.
             <div class="inbody1">
                 <div>
                     <center><h2>Profil</h2></center>
-                    Pationné par le développement depuis l'adoléscence, j'ai commencé par apprendre le php/MySQL en tant qu'autodidacte. Plus tard j'ai pu intégrer la première promotion blended de Simplon à Marseille où j'ai sus aquérir la fibre du travail en équipe et me professionaliser.
+                    Passionné par le développement depuis l'adolescence, j'ai commencé par apprendre le php/MySQL en tant qu'autodidacte. Plus tard j'ai pu intégrer la première promotion blended de Simplon à Marseille où j'ai su aquérir la fibre du travail en équipe et me professionaliser.
                 </div>
             </div>
             <div class="inbody2">
@@ -86,34 +87,24 @@ and open the template in the editor.
                         <li id="job3"><a href="#overlay6">Service civique développeur WEB</a></li>
                     </ol>
                 </div>
-            </div> 
-            <div class="inbody2">
-                <div>
-                    <center>
-                    <h2>Prendre contact</h2>
-                        <form action="#" method="post" enctype="application/x-www-form-urlencoded" name="formulaire">
-                            Nom : <input type="text" name="nom" size="30"/></br>
-                            Mail : <input type="text" name="mail" size="30"/></br>
-                            Sujet : <input type="text" name="sujet" size="30"/></br>
-                            Message : <br><textarea name="message" cols="50" rows="3"></textarea></br>
-                            <input type="submit" name="submit" value="envoyer"/>
-                        </form>
-                    </center>
-                </div>
-                <div>
+            </div>
+            <div class="inbody3">
+                <div class="inbodyright">
                     <center><h2><a href="#overlay7">Mon travail</a></h2>
-                    <div id="slideshow"> 
-                        <div id="s1">
-                            <div id="s2">
-                                <div id="s3">
-                                    <a class="next next1" href="#s2">Next</a> <!-- Pour la 1ère étape -->
-                                    <a class="prev prev2" href="#s1">Prev</a> - <a class="next next2" href="#s3">Next</a> <!-- Pour la 2ème étape -->
-                                    <a class="prev prev3" href="#s2">Prev</a> <!-- Pour la 3ème étape -->
-                                    <ul id="sContent"> 
-                                        <li><iframe width="300" height="150" src="https://www.youtube.com/embed/9YWhndhDynQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li><!-- 
-                                        --><li><iframe width="300" height="150" src="https://www.youtube.com/embed/NwvHjf-whXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li><!--
-                                        --><li><iframe width="300" height="150" src="https://www.youtube.com/embed/NwvHjf-whXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li>
-                                    </ul>
+                    <div class="videovisible">
+                        <div id="slideshow"> 
+                            <div id="s1">
+                                <div id="s2">
+                                    <div id="s3">
+                                        <a class="next next1" href="#s2">Next</a> <!-- Pour la 1ère étape -->
+                                        <a class="prev prev2" href="#s1">Prev</a> - <a class="next next2" href="#s3">Next</a> <!-- Pour la 2ème étape -->
+                                        <a class="prev prev3" href="#s2">Prev</a> <!-- Pour la 3ème étape -->
+                                        <ul id="sContent"> 
+                                            <li><iframe class="video" src="https://www.youtube.com/embed/9YWhndhDynQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li><!-- 
+                                            --><li><iframe class="video" src="https://www.youtube.com/embed/NwvHjf-whXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li><!--
+                                            --><li><iframe class="video" src="https://www.youtube.com/embed/2gbpKQ0aaQk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -182,13 +173,40 @@ and open the template in the editor.
                     <p>Stage éffectué à Urban prod, assosciation Marseillaise de février à novembre 2017.</p>
                     <ul>
                         <li>Création et mise en place d'un <a href="http://wiki.europeanmedialabpraxis.net">wiki pour european media praxis.</a></li>
-                        <li>Interventions sur les dimanches de la Canebière et différents ateliers de création et formations proposé au public</li>
+                        <li>Interventions sur les dimanches de la Canebière et différents ateliers de création et formations proposées au public</li>
                         <li>Prises de vues</li>
-                        <li>Montage vidéo (Reportages, clip, teaser)</li>
+                        <li>Montages vidéos (Reportages, clip, teaser)</li>
                         <li>Accueil du public</li>
                     </ul>
                 </div>
-            </div>             
+            </div>
+            <div id="overlay7">
+                <div class="popup_block">
+                    <a class="close" href="#"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="images/close_pop.png"></a>
+                    <center> 
+                            <iframe class="video" src="https://www.youtube.com/embed/9YWhndhDynQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <a href="#overlay8">Suivant</a>
+                    </center>
+                </div>
+            </div>   
+            <div id="overlay8">
+                <div class="popup_block">
+                    <a class="close" href="#"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="images/close_pop.png"></a>
+                    <center> 
+                            <iframe class="video" src="https://www.youtube.com/embed/NwvHjf-whXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <a href="#overlay7">Précédent</a> - <a href="#overlay9">Suivant</a>
+                    </center>
+                </div>
+            </div>  
+            <div id="overlay9">
+                <div class="popup_block">
+                    <a class="close" href="#"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="images/close_pop.png"></a>
+                    <center> 
+                        <iframe class="video" src="https://www.youtube.com/embed/2gbpKQ0aaQk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>
+                        <a href="#overlay8">Précédent</a>
+                    </center>
+                </div>
+            </div>  
         </div> 
         <!--fin overlays -->
     </body>
